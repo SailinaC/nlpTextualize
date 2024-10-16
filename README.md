@@ -1,6 +1,7 @@
 # 💫 nlpTextualize
 
 **nlpTextualize** is a Natural Language Processing (NLP) application built using Streamlit. It provides a variety of text processing functionalities such as summarization, sentiment analysis, named entity recognition, question answering, and text completion, leveraging advanced NLP models from the `transformers` library and `spaCy`.
+You can access the live web app [here](https://nlptextualize-jzbcsdoavesmwfibfrtuam.streamlit.app/).
 
 ## Key Features
 
@@ -9,10 +10,6 @@
 - **Sentiment Analysis**: Assess and interpret the sentiment conveyed in written content.
 - **Named Entity Recognition (NER)**: Identify and classify entities within the text.
 - **Question Answering**: Provide contextual information and answer specific queries.
-
-## Demo
-
-You can access the live web app [here](https://nlptextualize-jzbcsdoavesmwfibfrtuam.streamlit.app/). Explore various NLP functionalities to analyze and understand textual data.
 
 ## How It Works
 
