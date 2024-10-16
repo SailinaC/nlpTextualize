@@ -3,10 +3,21 @@ from time import sleep
 from stqdm import stqdm
 import pandas as pd
 from transformers import pipeline
-import json
 import spacy
 import spacy_streamlit
 
+# Try to load the spaCy model, if not available, show an error message
+def load_spacy_model():
+    try:
+        return spacy.load("en_core_web_sm")
+    except OSError:
+        st.error(
+            "The spaCy language model 'en_core_web_sm' is not available. "
+            "Please ensure that it is installed in your environment."
+        )
+        return None
+
+nlp = load_spacy_model()
 
 def draw_header():
     st.write(
@@ -51,7 +62,7 @@ def main():
             st.write("### Summary:")
             st.write(result_summary.capitalize())
 
-    elif choice == "Named Entity Recognition":
+    elif choice == "Named Entity Recognition" and nlp is not None:
         st.subheader("Named Entity Recognition")
         raw_text = st.text_area("Input Text for NER", "Enter your text here...")
 
