@@ -40,7 +40,7 @@ The application uses various NLP models from the `transformers` library and `spa
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-##Screenshots
+## Screenshots
 
 ![Screenshot 2024-10-16 094924](https://github.com/user-attachments/assets/13cc4242-09f8-410d-92fb-3a7c1c8718e6)
 
