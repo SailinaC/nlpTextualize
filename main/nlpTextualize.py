@@ -7,6 +7,16 @@ import json
 import spacy
 import spacy_streamlit
 
+# Install the language model if not already installed
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # If the model is not present, download it
+    st.write("Downloading spaCy language model 'en_core_web_sm'...")
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 def draw_header():
     st.write(
         """
@@ -51,13 +61,12 @@ def main():
             st.write(result_summary.capitalize())
 
     elif choice == "Named Entity Recognition":
-        nlp = spacy.load("en_core_web_sm")
         st.subheader("Named Entity Recognition")
         raw_text = st.text_area("Input Text for NER", "Enter your text here...")
 
         if raw_text:
             doc = nlp(raw_text)
-            for _ in range(50):
+            for _ in stqdm(range(50), desc="Processing..."):
                 sleep(0.1)
             spacy_streamlit.visualize_ner(doc, labels=nlp.get_pipe("ner").labels, title="Extracted Named Entities")
 
@@ -69,7 +78,7 @@ def main():
         if raw_text:
             result = sentiment_analysis(raw_text)[0]
             sentiment = result['label']
-            for _ in range(50):
+            for _ in stqdm(range(50), desc="Processing..."):
                 sleep(0.1)
             st.write(f"### Sentiment: {sentiment} 🎉")
 
