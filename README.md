@@ -12,7 +12,7 @@
 
 ## Demo
 
-You can access the live web app [here](your-web-app-link). Explore various NLP functionalities to analyze and understand textual data.
+You can access the live web app [here](https://nlptextualize-jzbcsdoavesmwfibfrtuam.streamlit.app/). Explore various NLP functionalities to analyze and understand textual data.
 
 ## How It Works
 
