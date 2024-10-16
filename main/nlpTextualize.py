@@ -7,15 +7,6 @@ import json
 import spacy
 import spacy_streamlit
 
-# Install the language model if not already installed
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    # If the model is not present, download it
-    st.write("Downloading spaCy language model 'en_core_web_sm'...")
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
 
 def draw_header():
     st.write(
