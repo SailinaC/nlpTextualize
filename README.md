@@ -35,10 +35,15 @@ The application uses various NLP models from the `transformers` library and `spa
 
    Based on the selected feature, the app performs different NLP tasks and displays the results on the main page.
 
-4. **Progress Indication**
-
-   The `stqdm` library is used to show progress bars during processing to improve user experience.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+##Screenshots
+
+![Screenshot 2024-10-16 094924](https://github.com/user-attachments/assets/13cc4242-09f8-410d-92fb-3a7c1c8718e6)
+
+![Screenshot 2024-10-16 095056](https://github.com/user-attachments/assets/8b26302b-1102-49ec-affd-65cef63eb3be)
+
+![Screenshot 2024-10-16 095246](https://github.com/user-attachments/assets/eb97d856-6253-4ae5-b4ad-4e38632f0b33)
